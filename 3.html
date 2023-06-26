@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="number">0</p>
+  <button id="button">Click me</button>
+
+  <script>
+    const p = document.querySelector("#number");
+    const button = document.querySelector("#button");
+
+    let number = 0;
+
+    function addNumber() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(number++);
+        }, 1000);
+      });
+    }
+
+    button.addEventListener("click", async () => {
+      p.innerText = "Loading..."
+
+      await addNumber();
+
+      p.innerText = number;
+    })
+
+  </script>
+</body>
+</html>
