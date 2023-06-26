@@ -18,4 +18,4 @@ async function reserveCoffee(tipe) {
   }
 }
 
-reserveCoffee("tubruk")
+reserveCoffee("turbuk")

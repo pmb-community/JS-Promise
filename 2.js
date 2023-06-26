@@ -1,5 +1,5 @@
 const state = {
-    isCoffeeMakerReady: true,
+    isCoffeeMakerReady: false,
     seedStocks: {
         arabica: 250,
         robusta: 60,
@@ -45,7 +45,7 @@ async function reserveACoffee(type, miligrams) {
     }
 }
 
-reserveACoffee('liberica', 80);
+reserveACoffee('liberica', 50);
 
 /* Output:
 Pesanan kopi sudah selesai!
